@@ -28,3 +28,36 @@ header{
     height: 2.5vh;
     margin-top: 2vh;
 }
+
+/*Nav bar för mobil styling*/
+
+.mobilnav{
+    background-color: #191919;
+    overflow: hidden;
+}
+
+.mobilnav a{
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.mobilnav a:hover{
+    background-color: blue;
+    color: black;
+
+}
+
+.mobilnav a:active{
+    background-color: aquamarine;
+    color: white;
+}
+
+.mobilnav .icon{
+    display: none;
+}
+
