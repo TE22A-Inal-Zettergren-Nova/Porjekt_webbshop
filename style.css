@@ -1,0 +1,30 @@
+body{
+   flex-direction: column;
+   display: flex; 
+   margin: 0px;
+}
+
+header{
+    background-color: #191919;
+    flex-direction: row;
+    display: flex;
+    color: white;
+    padding-left: 2vw;
+}
+
+#logga{
+    display: none;
+}
+
+#vagn{
+    width: auto;
+    height: 5vh;
+    margin-top: 2vh;
+    margin-left: 5vw;
+}
+
+#filter{
+    width: auto;
+    height: 2.5vh;
+    margin-top: 2vh;
+}
