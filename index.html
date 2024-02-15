@@ -6,22 +6,31 @@
     <title>Gaminghallen</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="script.js"></script>
     
 </head>
 <body>
     <header>
         <img id="logga" src="img/logo-transparent.webp" alt="Gaminghallen logga">
-        <h1>Gaminghallen</h1>
-        <img id="vagn" src="img/cart.webp" alt="Shoppingvagn">
-        <div class="mobilnav" id="myTopnav">
-            <a href="index.html" class="active">Datorer</a>
-            <a href="index.html">Skärmar</a>
-            <a href="index.html">Headset</a>
-            <a href="index.html">Mus & Tangentbord</a>
-            <a href="javascript:void(0);" class="icon" onclick="navMobil()">
-            <i class="fa fa-bars"></i>
-            </a>
-          </div>
+        <nav id="nav2">
+            <a href="" class="active">Gaminghallen<img id="vagn" src="img/cart.webp" alt="Shoppingvagn"></a>
+            <a href="#news">News</a>
+            <a href="#contact">Contact</a>
+            <div class="icon">
+                <button class="iconbtn">Dropdown
+                <i class="down"></i>
+                </button>
+                <div class="icon-content">
+                <a href="#">Datorer</a>
+                <a href="#">Skärmar</a>
+                <a href="#">Headset</a>
+                <a href="#">Mus & Tnagentbord</a>
+
+                </div>
+            </div>
+                <a href="#about">About</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+            </nav>
     </header>
 
     <aside>
@@ -40,13 +49,6 @@
         <label for="Sharkgaming">Sharkgaming</label><br>     
         <hr style="width:30%;text-align:left;margin-left:0">
     </aside>
-
-    <nav>
-        <a href="index.html">Datorer</a>
-        <p>Skärmar</p>
-        <p>Headset</p>
-        <p>Mus & Tangentbord</p>
-    </nav>
 
     <main>
         <article class="produkter"></article>
