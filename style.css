@@ -3,6 +3,7 @@ body{
    display: flex; 
    margin: 0;
    padding: 0;
+   font-family: Aoboshi One;
 }
 
 header{
@@ -17,7 +18,7 @@ header{
     width: auto;
     height: 4.5vh;
     margin-bottom: -1vh;
-    margin-left: 30vw;
+    margin-left: 18vw;
 
 }
 
@@ -27,26 +28,38 @@ header{
     margin-top: 2vh;
 }
 
+aside{
+    background-color: #D3D5E0;
+}
+
+main{
+    background-color: #E7E8F1;
+}
+
 /*Nav bar för mobil styling*/
 
 nav {
-    background-color: #191919;
+    background-color: #AFADBC;
     overflow: hidden;
+    border-bottom: 1px solid #191919;
   }
   
 nav a {
     float: left;
     display: block;
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
-    padding: 2vh 5vw;
+    padding: 17.1px 19.38px; /*Funkar ej med vh eller vw (testa %)*/
     text-decoration: none;
     font-size: 1rem;
 }
   
-.active {
+.rubrik {
     background-color: #191919;
     color: white;
+    font-size: 1.5rem;
+    font-family: Nico Moji;
+    padding: 2.15vh 5.1vw;
 }
   
 nav .icon {
@@ -59,11 +72,10 @@ nav .icon {
 }
   
 .icon .iconbtn {
-    font-size: 17px;
+    font-size: 0.5rem;
     border: none;
     outline: none;
     color: #AFADBC;
-    padding: 14px 16px;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
@@ -81,7 +93,7 @@ nav .icon {
 .icon-content a {
     float: none;
     color: black;
-    padding: 12px 16px;
+    padding: 12px 16px; /*fixa*/
     text-decoration: none;
     display: block;
     text-align: left;
