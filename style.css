@@ -70,6 +70,9 @@ article{
 
 .dator{
     height: 12vh;
+    margin-left: 3vw;
+    margin-right: 3vw;
+
 }
 
 .betyg{
@@ -85,8 +88,7 @@ article{
 
 .text{
     text-align: center;
-    
-    
+    margin-right: 1vw;
 }
 
  .priset{
@@ -102,7 +104,7 @@ h5{
 }
 
 p{
-    font-size: 0.7rem;
+    font-size: 0.65rem;
     margin: 0;
     margin-top: 0.5vh;
 }
