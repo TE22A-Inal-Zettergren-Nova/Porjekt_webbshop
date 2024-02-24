@@ -144,6 +144,37 @@ p{
     margin-top: 2vh;
 }
 
+/*footer*/
+footer{
+    background-color: #191919;
+    color: white;
+    text-align: center;
+    padding-top: 3vh;
+    padding-bottom: 4vh;
+}
+
+#sociala-medier{
+    display: flex;
+    justify-content: space-between;
+    width: 20vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+}
+
+.media{
+    height: 5vh;
+}
+
+#adress{
+    font-size: 1rem;
+}
+
+#mail{
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #1E2A96;
+}
 
 
 /*Nav - Responsive*/
