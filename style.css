@@ -19,9 +19,9 @@ header{
     height: 4.5vh;
     margin-bottom: -1vh;
     margin-left: 18vw;
-
 }
 
+/*filter*/
 #filter{
     width: auto;
     height: 2.5vh;
@@ -44,10 +44,6 @@ aside{
     margin: 0vh 12vw ;
 }
 
-main{
-    background-color: #E7E8F1;
-}
-
 .linjer{
     border-color: black;
 }
@@ -56,14 +52,75 @@ main{
     color: #1E2A96;
 }
 
-/*Articlar*/
+/*varor*/
+main{
+    background-color: #E7E8F1;
+}
+
 article{
     background-color: white;
+    display: flex;
+    flex-direction: row;
+    margin: 5% 3%;
+    padding-top: 1vh;
+    padding-bottom: 3vh;
+    border-radius: 3px;
+
+}
+
+.dator{
+    height: 12vh;
+}
+
+.betyg{
+    height: 12vh;
+    margin-left: 3%;
+}
+
+.bilder{
+    padding-top: 5vh;
+    flex-direction: row;
+    display: flex;
+}
+
+.text{
+    text-align: center;
+    
     
 }
 
-/*Nav - Responsive*/
+ .priset{
+    margin: 0;
+    text-align: right;
+    padding-right: 2vw;
+ }
 
+h5{
+    font-size: 1rem;
+    margin: 0;
+    margin-top: 2vh;
+}
+
+p{
+    font-size: 0.7rem;
+    margin: 0;
+    margin-top: 0.5vh;
+}
+
+.köp-knapp{
+    background-color: #1E2A96;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 1.5vh 16vw;
+    font-size: 0.7rem;
+    font-weight: bold;
+    margin-top: 2vh;
+}
+
+
+
+/*Nav - Responsive*/
 nav {
     background-color: #AFADBC;
     overflow: hidden;
