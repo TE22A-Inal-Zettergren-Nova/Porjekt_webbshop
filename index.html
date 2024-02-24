@@ -31,29 +31,41 @@
 
                 </div>
             </div>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+                <a href="javascript:void(0);" class="icon" onclick="navDrop()">&#9776;</a>
             </nav>
     </header>
 
     <aside>
         <h2><img id="filter" src="img/2055816.webp" alt="Bild på ett filter">Filter</h2>
-        <hr class="linjer" style="width:80%;text-align:left;margin-left:0">
+        <hr class="linjer" style="width:90%;text-align:center">
        
-
-        <input type="checkbox" id="Gaminghallen" name="Gaminghallen" value="Gaminghallen">
-        <label for="Gaminghallen">Gaminghallen</label><br>
-        <input type="checkbox" id="Lenovo" name="Lenovo" value="Lenovo">
-        <label for="Lenovo">Lenovo</label><br>
-        <input type="checkbox" id="Acer" name="Acer" value="Acer">
-        <label for="Acer">Acer</label><br>
-        <input type="checkbox" id="Sharkgaming" name="Sharkgaming" value="Sharkgaming">
-        <label for="Sharkgaming">Sharkgaming</label><br>     
-
-        <hr class="linjer" style="width:30%;text-align:left;margin-left:0">
+            <div class="rubrik-filter">
+            <h3>Pris (kr)</h3>
+            <h3>Tillverkare</h3>
+        </div>
+        <div class="filter-content">
+            <div class="filter-boxar">
+                <input type="checkbox" id="Gaminghallen" name="Gaminghallen" value="Gaminghallen">
+                <label for="Gaminghallen">Gaminghallen</label><br>
+                <input type="checkbox" id="Lenovo" name="Lenovo" value="Lenovo">
+                <label for="Lenovo">Lenovo</label><br>
+                <input type="checkbox" id="Acer" name="Acer" value="Acer">
+                <label for="Acer">Acer</label><br>
+                <input type="checkbox" id="Sharkgaming" name="Sharkgaming" value="Sharkgaming">
+                <label for="Sharkgaming">Sharkgaming</label><br>     
+        </div>
+    </div>
+    <hr class="linjer" style="width:90%;text-align:center">
     </aside>
 
     <main>
-        <article class="produkter"></article>
+        <article class="produkter">
+            <img class="dator" src="img/gaminghallen.webp" alt="dator">
+            <img src="img/5stjärnor.jpg" alt="fem stjärnor">
+            <h5>Gaminghallen Config Ultra</h5>
+            <p>I9-13900K / 64 GB / 2 TB / NVIDA GeForce RTX 4090 / Windows 11 Home</p>
+            <button class="köp-knapp">Lägg till i kassa</button>
+        </article>
         <article class="produkter"></article>
         <article class="produkter"></article>
         <article class="produkter"></article>
@@ -63,7 +75,7 @@
 
     <div id="Varukorg">
         <h2>Varukorg</h2>
-        <hr style="width:30%;text-align:left;margin-left:0">
+        <hr style="width:80%;text-align:left;margin-left:0">
     </div>
 </body>
 </html>

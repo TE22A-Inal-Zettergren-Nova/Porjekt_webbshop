@@ -32,6 +32,18 @@ aside{
     background-color: #D3D5E0;
 }
 
+.filter-content{
+    flex-direction: row;
+    display: flex;
+}
+
+.rubrik-filter{
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+    margin: 0vh 12vw ;
+}
+
 main{
     background-color: #E7E8F1;
 }
@@ -40,8 +52,15 @@ main{
     border-color: black;
 }
 
+.filter-boxar{
+    color: #1E2A96;
+}
 
-
+/*Articlar*/
+article{
+    background-color: white;
+    
+}
 
 /*Nav - Responsive*/
 
@@ -151,7 +170,6 @@ nav a:hover, .icon:hover .iconbtn {
     }
 
 
-    /*Style price range*/
   }
 
 
