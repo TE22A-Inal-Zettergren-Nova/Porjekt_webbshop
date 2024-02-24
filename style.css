@@ -79,6 +79,8 @@ h3, h2{
 /*varor*/
 main{
     background-color: #E7E8F1;
+    flex-direction: column;
+    display: flex;
 }
 
 article{
