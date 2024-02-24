@@ -145,6 +145,7 @@ p{
 }
 
 
+
 /*Nav - Responsive*/
 nav {
     background-color: #AFADBC;
@@ -157,7 +158,7 @@ nav a {
     display: block;
     color: rgb(0, 0, 0);
     text-align: center;
-    padding: 17.1px 19.38px; /*Funkar ej med vh eller vw (testa %)*/
+    padding: 17.1px 19.38px; /*Funkar ej med vh eller vw (testa rem)*/
     text-decoration: none;
     font-size: 1rem;
 }
