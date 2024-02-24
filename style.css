@@ -36,7 +36,14 @@ main{
     background-color: #E7E8F1;
 }
 
-/*Nav bar för mobil styling*/
+.linjer{
+    border-color: black;
+}
+
+
+
+
+/*Nav - Responsive*/
 
 nav {
     background-color: #AFADBC;
@@ -142,6 +149,9 @@ nav a:hover, .icon:hover .iconbtn {
       width: 100%;
       text-align: left;
     }
+
+
+    /*Style price range*/
   }
 
 
