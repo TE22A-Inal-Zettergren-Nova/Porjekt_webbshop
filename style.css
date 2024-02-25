@@ -55,6 +55,7 @@ aside{
     background-color: #D3D5E0;
     padding-bottom: 1.5vh;
     border-bottom: black solid 2px;
+    
 }
 
 .filter-content{
@@ -164,7 +165,8 @@ footer{
     color: white;
     text-align: center;
     padding-top: 3vh;
-    padding-bottom: 4vh;
+    padding-bottom: 5vh;
+
 }
 
 #sociala-medier{
