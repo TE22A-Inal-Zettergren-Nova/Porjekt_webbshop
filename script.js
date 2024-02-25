@@ -64,7 +64,11 @@ if (varukorgIcon) {
 }
 
 
-//funktion för att  lägga till i varukorghen
+//funktion för att  lägga till i varukorghen samt få fram total summa
+
+// Variabel för att hålla reda på den totala summan
+var totalSumma = 0;
+
 function addToCart(namn, beskrivning, pris, bildSrc) {
     // Skapa en ny artikel för varukorgen
     var artikel = document.createElement("article");
@@ -105,7 +109,22 @@ function addToCart(namn, beskrivning, pris, bildSrc) {
     var varukorgLista = document.getElementById("varukorg-lista");
     varukorgLista.appendChild(artikel);
 
+    //lägger till priset iden totala summan
+    totalSumma += parseFloat(pris.replace(" kr", "").replace(/\D/g, ''));
+    updateTotalSumma();
+
     // Visa varukorgen
     var varukorg = document.getElementById("Varukorg");
     varukorg.style.display = "block";
+
+    updateVarukorgKnappar();
+
+
+  //funktion för den totala summan
+    function updateTotalSumma() {
+      var summaElement = document.getElementById("total-summa");
+      summaElement.textContent = "Summa: " + totalSumma.toFixed(2) + " kr";
+  }
+
+  
 }

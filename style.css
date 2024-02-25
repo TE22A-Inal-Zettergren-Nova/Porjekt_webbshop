@@ -206,7 +206,50 @@ footer{
 
 }
 
+.varukorg-artikel {
+    display: flex;
+    margin-bottom: 2vh;
+    border-radius: 5px;
+    overflow: hidden;
+    padding-top: 3vh;
+}
 
+.varukorg-artikel img {
+    width: auto; 
+    height: 10vh; 
+    margin-left: 4vw;
+}
+
+.varukorg-text {
+    flex: 2;
+    text-align: center;
+    margin-left: -7vw;
+}
+
+.varukorg-namn {
+    font-weight: bold;
+    font-size: 0.9rem;
+    margin-left: 3vw;
+}
+
+.varukorg-beskrivning{
+    font-size: 0.6rem;
+    width: 55vw;
+    margin-left: 14vw;
+}
+
+.varukorg-pris {
+    color: #191919;
+    font-size: 0.8rem;
+    margin-left: 61vw;
+    font-weight: bold;
+    margin-bottom: -2vh;
+    margin-top: 2vh;
+}
+
+#total-summa{
+    font-weight: bold;
+}
 
 /*Nav - Responsive*/
 nav {
