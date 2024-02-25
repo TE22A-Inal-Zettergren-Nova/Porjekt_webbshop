@@ -194,13 +194,17 @@ footer{
 
 #Varukorg{
     display: none;
-    height: 8vh;
+    background-color: #D3D5E0;
 }
 
 #rubrik-varukorg{
     margin-left: 4vw;
 }
 
+.varukorg-lista{
+    background-color: #D3D5E0;
+
+}
 
 
 

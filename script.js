@@ -64,30 +64,48 @@ if (varukorgIcon) {
 }
 
 
-function addToCart(namn, pris, bildSrc) {
-  // Skapa en ny artikel för varukorgen
-  var artikel = document.createElement("article");
-  artikel.classList.add("varukorg-artikel");
+//funktion för att  lägga till i varukorghen
+function addToCart(namn, beskrivning, pris, bildSrc) {
+    // Skapa en ny artikel för varukorgen
+    var artikel = document.createElement("article");
+    artikel.classList.add("varukorg-artikel");
 
-  // Skapa en div för bilden och lägg till bakgrundsbilden
-  var bildDiv = document.createElement("div");
-  bildDiv.classList.add("varukorg-bild");
-  bildDiv.style.backgroundImage = "url('" + bildSrc + "')";
+    // Skapa en img-tag för bilden
+    var bildImg = document.createElement("img");
+    bildImg.src = bildSrc;
+    bildImg.alt = namn;
 
-  // Skapa en div för texten och lägg till artikelns namn och pris
-  var textDiv = document.createElement("div");
-  textDiv.classList.add("varukorg-text");
-  textDiv.innerHTML = "<h5>" + namn + "</h5><p>" + pris + "</p>";
+    // Skapa en div för texten och lägg till artikelns namn och pris
+    var textDiv = document.createElement("div");
+    textDiv.classList.add("varukorg-text");
 
-  // Lägg till bilden och texten i artikel-elementet
-  artikel.appendChild(bildDiv);
-  artikel.appendChild(textDiv);
+    var namnDiv = document.createElement("div");
+    namnDiv.classList.add("varukorg-namn");
+    namnDiv.textContent = namn;
 
-  // Lägg till den nya artikeln i varukorgen
-  var varukorgLista = document.getElementById("varukorg-lista");
-  varukorgLista.appendChild(artikel);
+    var beskrivningDiv = document.createElement("div");
+    beskrivningDiv.classList.add("varukorg-beskrivning");
+    beskrivningDiv.textContent = beskrivning;
 
-  // Visa varukorgen
-  var varukorg = document.getElementById("Varukorg");
-  varukorg.style.display = "block";
+    var prisDiv = document.createElement("div");
+    prisDiv.classList.add("varukorg-pris");
+    prisDiv.textContent = pris;
+
+
+    // Lgg till namn, pris och beskrinving i textDiv
+    textDiv.appendChild(namnDiv);
+    textDiv.appendChild(beskrivningDiv);
+    textDiv.appendChild(prisDiv);
+
+    // Lägg till blilden och texten i artikel-elementet
+    artikel.appendChild(bildImg);
+    artikel.appendChild(textDiv);
+
+    // Lägg till den nya artikeln i varukorgen
+    var varukorgLista = document.getElementById("varukorg-lista");
+    varukorgLista.appendChild(artikel);
+
+    // Visa varukorgen
+    var varukorg = document.getElementById("Varukorg");
+    varukorg.style.display = "block";
 }
