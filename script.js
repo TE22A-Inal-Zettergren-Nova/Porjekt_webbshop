@@ -50,6 +50,7 @@ function toggleVarukorg() {
   // Kontrollera om varukorgen är dold eller synlig och ändra dess display-stil
   if (varukorg.style.display === 'none' || varukorg.style.display === '') {
       varukorg.style.display = 'block'; // Visa varukorgen
+      updateKassaKnappSynlighet();
   } else {
       varukorg.style.display = 'none'; // Dölj varukorgen
   }
@@ -63,9 +64,20 @@ if (varukorgIcon) {
   console.error('Kunde inte hitta varukorgsikonen med angivet ID.');//extra kontroll
 }
 
+//ändrar kassan knappens synlighet
+function updateKassaKnappSynlighet() {
+  var varukorg = document.getElementById("Varukorg");
+  var tomKnapp = document.getElementById("kassa-knapp");
+
+  // Kontrollera om varukorgen innehåller några artiklar
+  var varukorgLista = document.getElementById("varukorg-lista");
+  var synlig = varukorgLista.children.length > 0;
+
+  // Visa eller döljer kassa knappen beroende på om varukorgen är tom eller inte
+  tomKnapp.style.display = synlig ? "block" : "none";
+}
 
 //funktion för att  lägga till i varukorghen samt få fram total summa
-
 // Variabel för att hålla reda på den totala summan
 var totalSumma = 0;
 
@@ -113,12 +125,12 @@ function addToCart(namn, beskrivning, pris, bildSrc) {
     totalSumma += parseFloat(pris.replace(" kr", "").replace(/\D/g, ''));
     updateTotalSumma();
 
+    updateKassaKnappSynlighet();
     // Visa varukorgen
     var varukorg = document.getElementById("Varukorg");
     varukorg.style.display = "block";
 
-    updateVarukorgKnappar();
-
+    
 
   //funktion för den totala summan
     function updateTotalSumma() {

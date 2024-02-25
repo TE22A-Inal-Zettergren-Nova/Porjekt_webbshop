@@ -249,6 +249,30 @@ footer{
 
 #total-summa{
     font-weight: bold;
+    font-size: 0.95rem;
+    margin-top: 1vh;
+}
+
+#kassa-knapp{
+    background-color: #1E2A96;
+    color: white;
+    border-radius: 25px;
+    padding: 1.7vh 7vw;
+    font-size: 0.7rem;
+    font-weight: bold;
+    border-color: #1E2A96;
+
+}
+
+.summa-position{
+    flex-direction: row;
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 1vh;
+    padding-bottom: 2vh;
+    margin-left: 6vw;
+    margin-right: 6vw;
+
 }
 
 /*Nav - Responsive*/
