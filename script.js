@@ -12,7 +12,7 @@ function navDrop() {
   //funktion för filtret
   function fnDisplayDivs() {
     // Hämta alla kryssrutor med klassen "daor-cont"
-    var checkboxes = document.getElementsByClassName("daor-cont");
+    var checkboxes = document.getElementsByClassName("dator-brand");
 
     // Skapa en variabel för att hålla koll på om någon kryssruta är markerad
     var anyCheckboxChecked = false;
@@ -61,4 +61,33 @@ if (varukorgIcon) {
   varukorgIcon.addEventListener('click', toggleVarukorg);
 } else {
   console.error('Kunde inte hitta varukorgsikonen med angivet ID.');//extra kontroll
+}
+
+
+function addToCart(namn, pris, bildSrc) {
+  // Skapa en ny artikel för varukorgen
+  var artikel = document.createElement("article");
+  artikel.classList.add("varukorg-artikel");
+
+  // Skapa en div för bilden och lägg till bakgrundsbilden
+  var bildDiv = document.createElement("div");
+  bildDiv.classList.add("varukorg-bild");
+  bildDiv.style.backgroundImage = "url('" + bildSrc + "')";
+
+  // Skapa en div för texten och lägg till artikelns namn och pris
+  var textDiv = document.createElement("div");
+  textDiv.classList.add("varukorg-text");
+  textDiv.innerHTML = "<h5>" + namn + "</h5><p>" + pris + "</p>";
+
+  // Lägg till bilden och texten i artikel-elementet
+  artikel.appendChild(bildDiv);
+  artikel.appendChild(textDiv);
+
+  // Lägg till den nya artikeln i varukorgen
+  var varukorgLista = document.getElementById("varukorg-lista");
+  varukorgLista.appendChild(artikel);
+
+  // Visa varukorgen
+  var varukorg = document.getElementById("Varukorg");
+  varukorg.style.display = "block";
 }

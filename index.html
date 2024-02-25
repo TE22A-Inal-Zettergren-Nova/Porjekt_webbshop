@@ -50,13 +50,13 @@
         <h3 id="tillverkare-rubrik">Tillverkare</h3>
         <div class="filter-content">
             <div class="filter-boxar">
-                <input class="daor-cont" type="checkbox" rel="gaminghallen" onclick="fnDisplayDivs()">
+                <input class="dator-brand" type="checkbox" rel="gaminghallen" onclick="fnDisplayDivs()">
                 <label for="Gaminghallen">Gaminghallen</label><br>
-                <input class="daor-cont" type="checkbox"  rel="lenovo" onclick="fnDisplayDivs()">
+                <input class="dator-brand" type="checkbox"  rel="lenovo" onclick="fnDisplayDivs()">
                 <label for="Lenovo">Lenovo</label><br>
-                <input class="daor-cont" type="checkbox" rel="acer" onclick="fnDisplayDivs()">
+                <input class="dator-brand" type="checkbox" rel="acer" onclick="fnDisplayDivs()">
                 <label for="Acer">Acer</label><br>
-                <input class="daor-cont" type="checkbox"  rel="sharkgaming" onclick="fnDisplayDivs()">
+                <input class="dator-brand" type="checkbox"  rel="sharkgaming" onclick="fnDisplayDivs()">
                 <label for="sharkgaming">Sharkgaming</label><br>     
             </div>
         </div>
@@ -74,7 +74,7 @@
                 <h4 class="priset">54 990 kr</h4>
                 <h5>Gaminghallen Config Ultra</h5>
                 <p>I9-13900K / 64 GB / 2 TB / NVIDA GeForce RTX 4090 / Windows 11 Home</p>
-                <button class="köp-knapp">Lägg till i kassa</button>
+                <button onclick="addToCart()" class="köp-knapp">Lägg till i kassa</button>
             </div>
         </article>
 
@@ -87,7 +87,7 @@
             <h4 class="priset">13 990 kr</h4>
             <h5>SHARKGAMING MAELSTORM</h5>
             <p>I5-12400F / 16 GB / 1 TB / MSI GeForce RTX 3060 / Windows 11 Home</p>
-            <button class="köp-knapp">Lägg till i kassa</button>
+            <button type="button" onclick="addToCart('SHARKGAMING MAELSTORM', '13 990 kr', 'img/sharkgaming.webp')" class="köp-knapp">Lägg till i kassa</button>
         </div>
         </article>
 
@@ -100,7 +100,7 @@
                 <h4 class="priset">13 990 kr</h4>
                 <h5>Acer Predator Orion PO3-640</h5>
                 <p>I5-12400F / 16 GB / 512 TB / NVIDA GeForce RTX 4060 / Windows 11 Home</p>
-                <button class="köp-knapp">Lägg till i kassa</button>
+                <button onclick="addToCart()" class="köp-knapp">Lägg till i kassa</button>
             </div>
         </article>
 
@@ -113,7 +113,7 @@
                 <h4 class="priset">14 998 kr</h4>
                 <h5>Lenovo Legion  T5 26AMR5</h5>
                 <p>R5 5600G / 16 GB / 512 GB / NVIDA GeForce RTX 3050 / Windows 11 Home</p>
-                <button class="köp-knapp">Lägg till i kassa</button>
+                <button onclick="addToCart()" class="köp-knapp">Lägg till i kassa</button>
             </div>
         </article>
 
@@ -126,7 +126,7 @@
                 <h4 class="priset">33 990 kr</h4>
                 <h5>Acer Predator Orion 5000 PO5-650</h5>
                 <p>I7-13700F / 32 GB / 1 TB / NVIDA GeForce RTX 4080 / Windows 11 Home</p>
-                <button class="köp-knapp">Lägg till i kassa</button>
+                <button onclick="addToCart()" class="köp-knapp">Lägg till i kassa</button>
             </div>
         </article>
 
@@ -139,7 +139,7 @@
                 <h4 class="priset">19 990 kr</h4>
                 <h5>Gaminghallen Config Core</h5>
                 <p>R5 7600 / 32 GB / 1 TB / AMD Radeon RX 7800 XT / Windows 11 Home</p>
-                <button class="köp-knapp">Lägg till i kassa</button>
+                <button onclick="addToCart('Gaminghallen Config Core','19 990 kr','img/gaminghallen-pro.jpg')" class="köp-knapp">Lägg till i kassa</button>
             </div>
         </article>
     </main>
@@ -149,10 +149,14 @@
     <div id="Varukorg">
         <h2 id="rubrik-varukorg">Varukorg</h2>
         <hr style="width:100%;text-align:center;margin-left:0">
+        <div id="varukorg-lista">
+            <!--ARTIKLAR LÄGGS HÄR VID TRYCK AV KNAPP-->
+        </div>
+
     </div>
     <!--slut varukorg-->
 
-    <footer>
+    <!-- <footer>
         <p id="adress">Adress: Hittapåvägen 4711</p>
         <a id="mail" href="https://www.google.com/intl/sv/gmail/about/">gaminghallen@gmail.com</a>
 
@@ -160,6 +164,6 @@
             <img class="media" src="img/insta.webp" alt="instagram">
             <img class="media" src="img/facebook.webp" alt="facebook">
         </div>
-    </footer>
+    </footer> -->
 </body>
 </html>
