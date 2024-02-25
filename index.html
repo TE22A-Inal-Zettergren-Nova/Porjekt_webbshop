@@ -11,10 +11,11 @@
     
 </head>
 <body>
+     <!--Start header/nav-->
     <header>
         <img id="logga" src="img/logo-transparent.webp" alt="Gaminghallen logga">
         <nav id="nav2">
-            <a href="" class="rubrik">Gaminghallen<img id="vagn" src="img/cart.webp" alt="Shoppingvagn"></a>
+            <a href="" class="rubrik">Gaminghallen</a>
             <a href="#">Datorer</a>
             <a href="#">Skärmar</a>
             <a href="#">Headset</a>
@@ -28,15 +29,23 @@
                 <a href="#">Skärmar</a>
                 <a href="#">Headset</a>
                 <a href="#">Mus & Tangentbord</a>
-
-                </div>
             </div>
+        </div>
                 <a href="javascript:void(0);" class="icon" onclick="navDrop()">&#9776;</a>
             </nav>
     </header>
+    <!--Slut header/nav-->
 
+    <!--Start filter-->
     <aside>
-        <div id="filter-rubrik"><img id="filter" src="img/2055816.webp" alt="Bild på ett filter"><h2>Filter</h2></div>
+        <div class="filter-rubrik">
+            <div id="filter-icon-text">
+                <img id="filter" src="img/2055816.webp" alt="Bild på ett filter">
+                <h2>Filter</h2>
+            </div>
+            <img onclick="toggleVarukorg()" id="vagn" src="img/cart.webp" alt="Shoppingvagn">
+        </div>
+
         <hr class="linjer" style="width:100%;text-align:center">
         <h3 id="tillverkare-rubrik">Tillverkare</h3>
         <div class="filter-content">
@@ -52,7 +61,9 @@
             </div>
         </div>
     </aside>
+    <!--Slut filter-->
 
+    <!--Start varor-->
     <main class="main">
         <article class="gaminghallen">
             <div class="bilder">
@@ -132,12 +143,14 @@
             </div>
         </article>
     </main>
+    <!--Slut varor-->
 
+    <!--start varukorg-->
     <div id="Varukorg">
-        <h2>Varukorg</h2>
-        <hr style="width:80%;text-align:left;margin-left:0">
+        <h2 id="rubrik-varukorg">Varukorg</h2>
+        <hr style="width:100%;text-align:center;margin-left:0">
     </div>
-
+    <!--slut varukorg-->
 
     <footer>
         <p id="adress">Adress: Hittapåvägen 4711</p>

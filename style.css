@@ -1,3 +1,5 @@
+
+/*css mobil layout*/
 body{
    flex-direction: column;
    display: flex; 
@@ -14,25 +16,35 @@ header{
     display: none;
 }
 
-#vagn{
-    width: auto;
-    height: 4.5vh;
-    margin-bottom: -1vh;
-    margin-left: 18vw;
-}
 
 /*filter*/
 #filter{
     width: auto;
     height: 3.5vh;
     margin-top: 0.6vh;
-    margin-left: 6vw;
+    margin-left: 4vw;
 }
 
-#filter-rubrik{
-    display: flex; 
+#vagn{
+    width: auto;
+    height: 4.5vh;
+    cursor: pointer;
+    margin-bottom: -1vh;
+    margin-top: 0.2vh;
+    margin-right: 6vw;
+}
+
+.filter-rubrik{
     margin-top: 0.5vh;  
-    font-size: 0.9rem; 
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+#filter-icon-text{
+    display: flex;
 }
 
 hr{
@@ -51,7 +63,7 @@ aside{
 }
 
 #tillverkare-rubrik{
-    margin-left: 6vw;
+    margin-left: 4vw;
     margin-bottom: 1vh;
 }
 
@@ -87,7 +99,7 @@ article{
     background-color: white;
     display: flex;
     flex-direction: row;
-    margin: 5% 3%;
+    margin: 4% 4%;
     padding-top: 1vh;
     padding-bottom: 3vh;
     border-radius: 3px;
@@ -117,11 +129,11 @@ article{
     margin-right: 1vw;
 }
 
- .priset{
+.priset{
     margin: 0;
     text-align: right;
     padding-right: 2vw;
- }
+}
 
 h5{
     font-size: 0.9rem;
@@ -178,12 +190,24 @@ footer{
     color: #1E2A96;
 }
 
+/*Varukorg*/
+
+#Varukorg{
+    display: none;
+    height: 8vh;
+}
+
+#rubrik-varukorg{
+    margin-left: 4vw;
+}
+
 
 /*Nav - Responsive*/
 nav {
-    background-color: #AFADBC;
+    background-color: #191919;
     overflow: hidden;
     border-bottom: 1px solid #191919;
+    color: white;
   }
   
 nav a {
@@ -201,7 +225,8 @@ nav a {
     color: white;
     font-size: 1.5rem;
     font-family: Nico Moji;
-    padding: 2.15vh 5.1vw;
+    padding:  5.1vw;
+    padding-bottom: 2.15vh;
 }
   
 nav .icon {
@@ -211,6 +236,7 @@ nav .icon {
 .icon {
     float: left;
     overflow: hidden;
+    color: white;
 }
   
 .icon .iconbtn {
@@ -248,7 +274,7 @@ nav a:hover, .icon:hover .iconbtn {
   
 .icon-content a:hover {
     background-color: white;
-    color: black;
+    color: rgb(255, 255, 255);
 }
   
 .icon:hover .icon-content {
@@ -266,7 +292,7 @@ nav a:hover, .icon:hover .iconbtn {
 }
   
 @media screen and (max-width: 600px) {
-    nav.responsive {position: relative;}
+    nav.responsive {position: relative; background-color: #AFADBC;}
     nav.responsive a.icon {
       position: absolute;
       right: 0;
@@ -277,6 +303,7 @@ nav a:hover, .icon:hover .iconbtn {
       display: block;
       text-align: left;
     }
+    
     nav.responsive .icon {float: none;}
     nav.responsive .icon-content {position: relative;}
     nav.responsive .icon .iconbtn {

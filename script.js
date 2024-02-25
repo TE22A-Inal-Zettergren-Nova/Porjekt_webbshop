@@ -1,5 +1,5 @@
 
-//nav-bar//
+//nav-bar
 function navDrop() {
     var x = document.getElementById("nav2");
     if (x.className === "nav") {
@@ -9,6 +9,7 @@ function navDrop() {
     }
   }
 
+  //funktion för filtret
   function fnDisplayDivs() {
     // Hämta alla kryssrutor med klassen "daor-cont"
     var checkboxes = document.getElementsByClassName("daor-cont");
@@ -41,4 +42,23 @@ function navDrop() {
             allArticles[k].style.display = "flex";
         }
     }
+}
+
+// Funktion för att visa eller dölja varukorgen
+function toggleVarukorg() {
+  var varukorg = document.getElementById('Varukorg');
+  // Kontrollera om varukorgen är dold eller synlig och ändra dess display-stil
+  if (varukorg.style.display === 'none' || varukorg.style.display === '') {
+      varukorg.style.display = 'block'; // Visa varukorgen
+  } else {
+      varukorg.style.display = 'none'; // Dölj varukorgen
+  }
+}
+
+// Hämta referensen till varukorgsikonen och lägg till en klickhändelse
+var varukorgIcon = document.getElementById('vagn');
+if (varukorgIcon) {
+  varukorgIcon.addEventListener('click', toggleVarukorg);
+} else {
+  console.error('Kunde inte hitta varukorgsikonen med angivet ID.');//extra kontroll
 }
