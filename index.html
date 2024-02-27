@@ -12,8 +12,12 @@
 </head>
 <body>
      <!--Start header/nav-->
-    <header>
+    <div class="header-dator">
         <img id="logga" src="img/logo-transparent.webp" alt="Gaminghallen logga">
+        <h1>Gaminghallen</h1>
+        <img onclick="toggleVarukorg()" id="vagn" src="img/cart.webp" alt="Shoppingvagn">
+    </div>
+    <header>
         <nav id="nav2">
             <a href="" class="rubrik">Gaminghallen</a>
             <a href="#">Datorer</a>
@@ -43,7 +47,7 @@
                 <img id="filter" src="img/2055816.webp" alt="Bild på ett filter">
                 <h2>Filter</h2>
             </div>
-            <img onclick="toggleVarukorg()" id="vagn" src="img/cart.webp" alt="Shoppingvagn">
+            <img onclick="toggleVarukorg()" id="vagn" class="nav-vagn" src="img/cart.webp" alt="Shoppingvagn">
         </div>
 
         <hr class="linjer" style="width:99%;text-align:center">
