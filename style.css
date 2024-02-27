@@ -400,7 +400,7 @@ nav a:hover, .icon:hover .iconbtn {
     body{
         display:grid;
         grid-template-columns: 30vw 70vw;
-        grid-template-rows: 11.5vh 5.8vh 65vh 25vh;
+        grid-template-rows: 11.5vh 5.8vh 65vh 17.7vh;
         gap: 0;
         width: 100%;
         overflow-x: hidden;
@@ -582,7 +582,7 @@ nav a:hover, .icon:hover .iconbtn {
     
     .text p{font-size: 1rem; margin: 0.5vh 2vw;}
 
-    .text h5{font-size: 1.5rem;}
+    .text h5{font-size: 1.5rem; margin-top: 0.8vh;}
 
     .priset{
         display: block;
@@ -601,25 +601,51 @@ nav a:hover, .icon:hover .iconbtn {
         background-color: #1E2A96;
         color: white;
         border-radius: 30px;
-        padding: 1.5vh 16vw;
+        padding: 1.3vh 14vw;
         font-size: 1.2rem;
         font-weight: bold;
         margin-top: 1vh;
         border-color: #1E2A96;
     }
 
-
-
-
     main{
         grid-column: 2;
         grid-row: 3/4;
+        overflow-y: scroll;
+        max-height: 65vh;
 
     }
 
+
+    /*footer*/
     footer{
         grid-column: 1 / 3;
         grid-row: 4;
+        padding-bottom: 1vh;
+    }
+
+    #sociala-medier{
+        display: flex;
+        justify-content: space-between;
+        width: 15vw;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2vh;
+    }
+    
+    .media{
+        height: 4vh;
+    }
+    
+    #adress{
+        font-size: 1.4rem;
+        margin-bottom: 0.5vh;
+    }
+    
+    #mail{
+        font-size: 1.3rem;
+        text-decoration: none;
+        color: #1E2A96;
     }
     
 
