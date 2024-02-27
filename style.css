@@ -391,13 +391,17 @@ nav a:hover, .icon:hover .iconbtn {
 
   }
 
+  /*TABLETT*/
   @media only screen and (min-width: 641px) and (max-width:1007px){
     body{
         display:grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 15vw 10vw 60vw 20vw;
+        grid-template-columns: 30vw 70vw;
+        grid-template-rows: 11.5vh 5.8vh 65vh 25vh;
+        gap: 0;
+        margin: 0;
     }
 
+    /*header*/
     .rubrik{
         display: none;
     }
@@ -409,17 +413,20 @@ nav a:hover, .icon:hover .iconbtn {
         background-color: #191919;
         color: white;
         font-family: Nico Moji;
-        font-size: 1.7rem;
+        font-size: 1.6rem;
         justify-content: space-between;
         padding-top: 2vh;
         padding-bottom: 2vh;
         border-bottom: #1E2A96 10px solid;
+        width: 100vw;
     }
 
+    h1, #logga, #vagn{
+        margin-bottom: 2vh;
+    }
     h1{
         margin-bottom: 0;
         margin-top: 1vh;
-
     }
 
     #logga{
@@ -429,10 +436,11 @@ nav a:hover, .icon:hover .iconbtn {
 
     #vagn{
         height: 6vh;
-        margin-right: 4vw;
-
+        margin-right: 5vw;
     }
 
+
+    /*nav*/
     .nav-vagn{
         display: none;
     }
@@ -440,19 +448,111 @@ nav a:hover, .icon:hover .iconbtn {
     header{
         grid-column: span 1 / 2;
         width: 100vw;
-        grid-row: 2;    
+        grid-row: 2;  
+        align-items: center;
+        justify-content: center;
     }
 
     nav{
         background-color: #AFADBC;
+        padding-left: 8vh;
+        border-bottom: #191919 2px solid;
     }
+    nav a{font-size: 1.45rem;}
 
+
+    /*filter*/
     aside{
         grid-column: 1;
+        grid-row: 3/4;
+        border: none;
+    }
+
+    #filter{
+        width: auto;
+        height: 3vh;
+        margin-top: 0.8vh;
+        margin-left: 6.5vw;
+    }
+
+    .filter-rubrik{
+        font-size: 1.5rem;
+        margin-top: 1.5vh;
+    }
+    
+    .linjer{
+        margin-top: 1vh;
+        width: 90%;
+        text-align: center;
+    }
+    
+    .filter-content{
+        flex-direction: row;
+        display: flex;
+    }
+    
+    #tillverkare-rubrik{
+        font-size: 1.9rem;
+        text-align: center;
+        margin: 0;
+        margin-top: 2vh;
+        margin-bottom: 4vh;
+    }
+    
+    h3, h2{
+        margin: 0;
+    }
+    
+    .linjer{
+        border-color: black;
+        border: black solid 1px;
+    }
+    
+    .filter-boxar{
+        color: #1E2A96;
+        font-size: 1.6rem;
+        flex-direction: column;
+        display: flex;
+        margin-left: 2vw;
+        margin-right: 2vw;
+        border-bottom: #191919 solid 2px;
+
+    }
+
+    .dator-brand{
+        margin-bottom: 2vh;
+    }
+
+    /* dubblar storleken på checkboxarna, i "alla" olika webbläsare */
+    input[type=checkbox]{
+        -ms-transform: scale(2); /* IE */
+        -moz-transform: scale(2); /* FF */
+        -webkit-transform: scale(2); /* Safari and Chrome */
+        -o-transform: scale(2); /* Opera */
+        transform: scale(2);
+        padding: 1vh;
+        margin-right: 2vw;
+    }
+
+    
+    .filter-content{
+        flex-direction: column;
+        display: flex;
     }
 
 
+    /*main*/
 
+    main{
+        grid-column: 2;
+        grid-row: 3/4;
+
+    }
+
+    footer{
+        grid-column: 1 / 3;
+        grid-row: 4;
+    }
     
 
     }

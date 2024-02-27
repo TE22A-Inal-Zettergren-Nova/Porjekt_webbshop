@@ -17,13 +17,13 @@
         <h1>Gaminghallen</h1>
         <img onclick="toggleVarukorg()" id="vagn" src="img/cart.webp" alt="Shoppingvagn">
     </div>
-    <header>
+    <header> <!--header för mobil / nav för dator och mobil-->
         <nav id="nav2">
             <a href="" class="rubrik">Gaminghallen</a>
-            <a href="#">Datorer</a>
-            <a href="#">Skärmar</a>
-            <a href="#">Headset</a>
-            <a href="#">Mus & Tangentbord</a>
+            <a class="nav-innehåll" href="#">Datorer</a>
+            <a class="nav-innehåll" href="#">Skärmar</a>
+            <a class="nav-innehåll" href="#">Headset</a>
+            <a class="nav-innehåll" href="#">Mus & Tangentbord</a>
             <div class="icon">
                 <button class="iconbtn">Dropdown
                 <i class="down"></i>
@@ -50,18 +50,14 @@
             <img onclick="toggleVarukorg()" id="vagn" class="nav-vagn" src="img/cart.webp" alt="Shoppingvagn">
         </div>
 
-        <hr class="linjer" style="width:99%;text-align:center">
+        <hr class="linjer" style="text-align:center">
         <h3 id="tillverkare-rubrik">Tillverkare</h3>
         <div class="filter-content">
             <div class="filter-boxar">
-                <input class="dator-brand" type="checkbox" rel="gaminghallen" onclick="fnDisplayDivs()">
-                <label for="Gaminghallen">Gaminghallen</label><br>
-                <input class="dator-brand" type="checkbox"  rel="lenovo" onclick="fnDisplayDivs()">
-                <label for="Lenovo">Lenovo</label><br>
-                <input class="dator-brand" type="checkbox" rel="acer" onclick="fnDisplayDivs()">
-                <label for="Acer">Acer</label><br>
-                <input class="dator-brand" type="checkbox"  rel="sharkgaming" onclick="fnDisplayDivs()">
-                <label for="sharkgaming">Sharkgaming</label><br>     
+                <label for="Gaminghallen"><input class="dator-brand" type="checkbox" rel="gaminghallen" onclick="fnDisplayDivs()">Gaminghallen</label><br>
+                <label for="Lenovo"><input class="dator-brand" type="checkbox"  rel="lenovo" onclick="fnDisplayDivs()">Lenovo</label><br>
+                <label for="Acer"><input class="dator-brand" type="checkbox" rel="acer" onclick="fnDisplayDivs()">Acer</label><br>
+                <label for="sharkgaming"><input class="dator-brand" type="checkbox"  rel="sharkgaming" onclick="fnDisplayDivs()">Sharkgaming</label><br>     
             </div>
         </div>
     </aside>
@@ -152,7 +148,7 @@
     <!--start varukorg-->
     <div id="Varukorg">
         <h2 id="rubrik-varukorg">Varukorg</h2>
-        <hr class="linjer" style="width:100%;text-align:center;margin-left:0">
+        <hr class="linjer" style="text-align:center;margin-left:0">
         <div id="varukorg-lista">
             <!--ARTIKLAR LÄGGS HÄR VID TRYCK AV KNAPP-->
         </div>

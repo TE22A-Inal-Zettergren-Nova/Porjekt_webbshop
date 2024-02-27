@@ -138,5 +138,4 @@ function addToCart(namn, beskrivning, pris, bildSrc) {
       summaElement.textContent = "Summa: " + totalSumma.toFixed(2) + " kr";
   }
 
-  
 }
