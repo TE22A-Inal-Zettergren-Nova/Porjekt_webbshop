@@ -400,10 +400,11 @@ nav a:hover, .icon:hover .iconbtn {
     body{
         display:grid;
         grid-template-columns: 30vw 70vw;
-        grid-template-rows: 11.5vh 5.8vh 65vh 17.7vh;
+        grid-template-rows: 11.5vh 5.8vh 65vh auto 17.7vh;
         gap: 0;
         width: 100%;
         overflow-x: hidden;
+
     }
 
     /*header*/
@@ -616,11 +617,93 @@ nav a:hover, .icon:hover .iconbtn {
 
     }
 
+    /*varukorg*/
+    #Varukorg{
+        grid-column: 1 / 3;
+        grid-row: 4;
+    }
+    
+    #rubrik-varukorg{
+        margin-left: 4vw;
+        font-size: 2rem;
+    }
+
+    .varukorg-lista{
+        margin: 0;
+        padding: 0;
+        width: 55vw;
+    }
+    
+    
+    .varukorg-artikel {
+        border-radius: 5px;
+        overflow: hidden;
+        width: 55vw;
+    }
+    
+    .varukorg-artikel img {
+        width: auto; 
+        height: 9vh; 
+        margin-left: 2.5vw;
+    }
+    
+    .varukorg-text {
+        flex: 2;
+        margin: 0;
+    }
+    
+    .varukorg-namn {
+        font-weight: bold;
+        font-size: 1.1rem;
+        margin: 0;
+    }
+    
+    .varukorg-beskrivning{
+        font-size: 0.8rem;
+        width: auto;
+        margin: 1vh 3vw;
+
+    }
+    
+    .varukorg-pris {
+        font-size: 1rem;
+        margin: 0;
+        margin-left: 28vw;
+        margin-top: 3vh;
+        margin-bottom: -1vh;
+    }
+    
+    #total-summa{
+        margin-bottom: 2.5vh ;
+        font-size: 1.5em;
+        padding: 0;
+    }
+    
+    #kassa-knapp{
+        background-color: #1E2A96;
+        color: white;
+        border-radius: 40px;
+        padding: 1.3vh 8vw;
+        font-size: 1.3rem;
+        font-weight: bold;
+        border-color: #1E2A96;
+
+    }
+    
+    .summa-position{
+        padding: 0;
+        margin: 0;
+        float: right;
+        flex-direction: column-reverse;
+        margin-right: 5vw;
+        margin-top: -15vh;
+    }
+    
 
     /*footer*/
     footer{
         grid-column: 1 / 3;
-        grid-row: 4;
+        grid-row: 5;
         padding-bottom: 1vh;
     }
 
