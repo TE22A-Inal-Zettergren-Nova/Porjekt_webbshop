@@ -46,6 +46,7 @@ function navDrop() {
 }
 
 // Funktion för att visa eller dölja varukorgen
+//gäller för tablett och mobil
 function toggleVarukorg() {
   var varukorg = document.getElementById('Varukorg');
   // Kontrollera om varukorgen är dold eller synlig och ändra dess display-stil
@@ -141,15 +142,18 @@ function addToCart(namn, beskrivning, pris, bildSrc) {
 
 }
 
- // Funktion för att uppdatera antalet kolumner baserat på varukorgens synlighet
+//denna gäller för varukorgen till dator
+// Funktion för att uppdatera antalet kolumner baserat på varukorgens synlighet
  function updateColumns(varukorgVisible) {
   const main = document.querySelector('main');
   if (varukorgVisible) {
       // Om varukorgen är synlig, visa 2 kolumner
       main.style.gridTemplateColumns = 'repeat(2, 1fr)';
+      main.style.gridColumn = '2 / 3';
   } else {
       // Om varukorgen är dold, visa 3 kolumner
-      main.style.gridTemplateColumns = 'repeat(3, 1fr)';
+      main.style.gridTemplateColumns = 'repeat(3, 26vw)';
+      main.style.gridColumn = '2 / span 2';
   }
 }
 
