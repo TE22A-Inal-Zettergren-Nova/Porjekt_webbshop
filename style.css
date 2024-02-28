@@ -171,13 +171,14 @@ footer{
     text-align: center;
     padding-top: 3vh;
     padding-bottom: 5vh;
+    height: auto;
 
 }
 
 #sociala-medier{
     display: flex;
     justify-content: space-between;
-    width: 20vw;
+    width: 22vw;
     margin-left: auto;
     margin-right: auto;
     margin-top: 2vh;
@@ -369,9 +370,7 @@ nav a:hover, .icon:hover .iconbtn {
       float: right;
       display: block;
     }
-}
-  
-@media screen and (max-width: 600px) {
+
     nav.responsive {position: relative; background-color: #AFADBC;}
     nav.responsive a.icon {
       position: absolute;
@@ -391,19 +390,17 @@ nav a:hover, .icon:hover .iconbtn {
       width: 100%;
       text-align: left;
     }
-
-
-  }
+}
 
   /*TABLETT*/
   @media only screen and (min-width: 641px) and (max-width:1007px){
     body{
         display:grid;
-        grid-template-columns: 30vw 70vw;
+        grid-template-columns: 30vw auto;
         grid-template-rows: 11.5vh 5.8vh 65vh auto 17.7vh;
         gap: 0;
         width: 100%;
-        overflow-x: hidden;
+        overflow-y: hidden;
 
     }
 
@@ -472,7 +469,8 @@ nav a:hover, .icon:hover .iconbtn {
     aside{
         grid-column: 1;
         grid-row: 3/4;
-        border: none;
+        border-bottom: none;
+        border-right: #191919 1px solid;
     }
 
     #filter{
@@ -500,10 +498,11 @@ nav a:hover, .icon:hover .iconbtn {
     
     #tillverkare-rubrik{
         font-size: 1.9rem;
-        text-align: center;
+        text-align: left;
         margin: 0;
         margin-top: 2vh;
-        margin-bottom: 4vh;
+        margin-bottom: 3vh;
+        margin-left: 1.5vh;
     }
     
     h3, h2{
@@ -517,7 +516,7 @@ nav a:hover, .icon:hover .iconbtn {
     
     .filter-boxar{
         color: #1E2A96;
-        font-size: 1.6rem;
+        font-size: 1.45rem;
         flex-direction: column;
         display: flex;
         margin-left: 2vw;
@@ -549,8 +548,6 @@ nav a:hover, .icon:hover .iconbtn {
 
 
     /*artiklar*/
-
-
     article{
         display:block;
         margin: 2vh 4vw;
@@ -620,7 +617,7 @@ nav a:hover, .icon:hover .iconbtn {
     /*varukorg*/
     #Varukorg{
         grid-column: 1 / 3;
-        grid-row: 4;
+        grid-row: 4 / 6;
     }
     
     #rubrik-varukorg{
@@ -734,8 +731,303 @@ nav a:hover, .icon:hover .iconbtn {
 
     }
 
+@media only screen and (min-width: 1008px){
+    body{
+        display: grid;
+        grid-template-columns: 18vw auto auto;
+        grid-template-rows: 15vh auto 65vh auto auto;
+        gap: 0;
+        overflow-x: hidden;
+    }
 
-  
+    /*header*/
+    .header-dator{
+        grid-column: 1/ 4;
+        display: flex;
+        grid-row: 1;
+        background-color: #191919;
+        color: white;
+        font-family: Nico Moji;
+        font-size: 1.4rem;
+        justify-content: space-between;
+        border-bottom: #1E2A96 10px solid;
+    }
+
+    .rubrik{
+        display: none;
+    }
+
+    #logga, #vagn{margin-top: 2vh;}
+
+    h1{margin-top: 4vh;}
+
+    #logga{
+        height: 10vh;
+        margin-left: 4vw;
+    }
+
+    #vagn{
+        height: 9vh;
+        margin-right: 5vw;
+    }
+
+
+    /*nav*/
+    .nav-vagn{
+        display: none
+    }
+
+    header{
+        grid-row: 2;
+        grid-column: 1 /4;
+    }
+
+    nav{
+        background-color: #AFADBC;
+        padding-left: 33vw;
+        border-bottom: #191919 2px solid;
+    }
+
+    nav a{font-size: 1.1rem;}
+    
+
+    /*filter*/
+    aside{
+        grid-row: 3 /5;
+        grid-column: 1;
+        border-right: #191919 1px solid;
+    }
+
+    #filter{
+        height: 4vh;
+        margin-top: 0.8vh;
+        margin-left: 4.5vw;
+        margin-right: 1vw;
+    }
+
+    .filter-rubrik{
+        font-size: 1.1rem;
+        margin-top: 2vh;
+    }
+    
+    .linjer{
+        margin-top: 1vh;
+        width: 80%;
+        text-align: center;
+    }
+    
+    .filter-content{
+        flex-direction: row;
+        display: flex;
+    }
+    
+    #tillverkare-rubrik{
+        font-size: 1.5rem;
+        text-align: left;
+        margin: 0;
+        margin-top: 4vh;
+        margin-bottom: 5vh;
+        margin-left: 1.5vw;
+    }
+    
+    h3, h2{
+        margin: 0;
+    }
+    
+    .linjer{
+        border-color: black;
+        border: black solid 1px;
+    }
+    
+    .filter-boxar{
+        color: #1E2A96;
+        font-size: 1.1rem;
+        flex-direction: column;
+        display: flex;
+        margin-left: 1.5vw;
+        margin-right: 1.5vw;
+        border-bottom: #191919 solid 2px;
+    }
+
+    .dator-brand{
+        margin-bottom: 4vh;
+    }
+
+    /*storleken ökar med  0.5 på checkboxarna, i "alla" olika webbläsare */
+    input[type=checkbox]{
+        -ms-transform: scale(2); /* IE */
+        -moz-transform: scale(2); /* FF */
+        -webkit-transform: scale(2); /* Safari and Chrome */
+        -o-transform: scale(2); /* Opera */
+        transform: scale(2);
+        padding: 1vh;
+        margin-right: 2vw;
+    }
+
+    
+    .filter-content{
+        flex-direction: column;
+        display: flex;
+    }
+
+
+    /*artiklar*/
+    main{
+        grid-row: 3 / 5;
+        grid-column: 2 / 3;
+        overflow-y: scroll;
+        display: grid;
+        grid-template-columns: repeat(2, 28.8vw); /* 3 artiklar per rad */
+        max-height: 70vh;
+    }
+
+    article{
+        display:block;
+        margin: 2vh 2vw;
+        padding-top: 1.5vh;
+        padding-bottom: 2vh;
+        max-height: 40vh;
+        max-block-size: 40vh;
+    }
+
+    .dator{
+        height: 15vh;
+        margin-left: auto;
+        margin-right: 4vw;
+    }
+    
+    .betyg{
+        height: 14vh;
+        margin-left: 1vw;
+    }
+    
+    .bilder{
+        flex-direction: row;
+        display: flex;
+        padding: 0;
+    }
+    
+    .text{
+        text-align: center;
+    }
+    
+    .text p{font-size: 0.75rem; margin: 0.7vh 2vw;}
+
+    .text h5{font-size: 1.1rem; margin-top: 0.9vh;}
+
+    .priset{
+        display: block;
+        text-align: right;
+        margin-top: 0;
+        font-size: 1.1rem;
+        margin-right: 1vw;
+    }
+
+    .priset-mobil{
+        display: none;
+    }
+    
+    
+    .köp-knapp{
+        background-color: #1E2A96;
+        color: white;
+        border-radius: 25px;
+        padding: 2.3vh 2.5vw;
+        font-size: 0.8rem;
+        font-weight: bold;
+        margin-top: 1.5vh;
+        border-color: #1E2A96;
+    }
+
+    /*varukorg*/
+    #Varukorg{
+        grid-column: 3;
+        grid-row: 3 / 5;
+        width: 25vw;
+    }
+    
+    #rubrik-varukorg{
+       margin-top: 1vh;
+    }
+
+    .varukorg-lista{
+        margin: 0;
+        padding: 0;
+        width: 55vw;
+    }
+    
+    
+    .varukorg-artikel {
+        border-radius: 5px;
+        overflow: hidden;
+        margin: 2vh 1.5vw;
+    }
+    
+    .varukorg-artikel img {
+        width: auto; 
+        height: 11vh; 
+        margin-left: 1.5vw;
+    }
+    
+    .varukorg-text {
+        flex: 2;
+        margin: 0;
+    }
+    
+    .varukorg-namn {
+        font-weight: bold;
+        font-size: 0.85rem;
+        margin: 0;
+    }
+    
+    .varukorg-beskrivning{
+        font-size: 0.6rem;
+        width: auto;
+        margin: 0 1vw;
+
+    }
+    
+    .varukorg-pris {
+        font-size: 1rem;
+        text-align: right;
+        margin-right: 0.7vw;
+        margin-top: 2vh;
+        margin-bottom: -1vh;
+        margin-left: 0;
+    }
+    
+    #total-summa{
+        margin-bottom: 2.5vh ;
+        font-size: 1.2em;
+        padding: 0;
+    }
+    
+    #kassa-knapp{
+        background-color: #1E2A96;
+        color: white;
+        border-radius: 25px;
+        padding: 2.5vh 4vw;
+        font-size: 1rem;
+        font-weight: bold;
+        border-color: #1E2A96;
+    }
+    
+    .summa-position{
+        flex-direction: column-reverse;
+        margin-top: 5vh;
+    }
+
+    footer{
+        grid-row: 5;
+        grid-column: 1 /4;
+    }
+
+    #sociala-medier{
+        width: 6vw;
+    }
+}
+
+
 
 
 
