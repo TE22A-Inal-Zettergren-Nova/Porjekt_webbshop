@@ -408,6 +408,8 @@ nav a:hover, .icon:hover .iconbtn {
         gap: 0;
         width: 100%;
         overflow-x: hidden;
+        font-family: "Aoboshi One",  Tahoma;
+
 
     }
 
@@ -418,6 +420,7 @@ nav a:hover, .icon:hover .iconbtn {
 
     .header-dator{
         display: flex;
+        font-family:"Nico Moji", Trebuchet MS;
         grid-column: span 1 / 2;
         grid-row: 1;
         background-color: #191919;
@@ -762,11 +765,14 @@ nav a:hover, .icon:hover .iconbtn {
         grid-template-rows: auto auto 65vh auto auto;
         gap: 0;
         overflow-x: hidden;
+        font-family: "Aoboshi One",  Tahoma;
+
     }
 
     /*header*/
     .header-dator{
         grid-column: 1/ 4;
+        font-family:"Nico Moji", Trebuchet MS;
         display: flex;
         grid-row: 1;
         background-color: #191919;
