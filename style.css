@@ -5,7 +5,7 @@ body{
    display: flex; 
    margin: 0;
    padding: 0;
-   font-family: Aoboshi One;
+   font-family: "Aoboshi One",  Tahoma;
    width: 100vw;
 }
 
@@ -311,7 +311,7 @@ nav a {
     background-color: #191919;
     color: white;
     font-size: 1.5rem;
-    font-family: Nico Moji;
+    font-family:"Nico Moji", Trebuchet MS;
     padding:  5.1vw;
     padding-bottom: 2.15vh;
 }
@@ -422,7 +422,6 @@ nav a:hover, .icon:hover .iconbtn {
         grid-row: 1;
         background-color: #191919;
         color: white;
-        font-family: Nico Moji;
         font-size: 1rem;
         justify-content: space-between;
         padding-top: 1.5vh;
@@ -772,7 +771,6 @@ nav a:hover, .icon:hover .iconbtn {
         grid-row: 1;
         background-color: #191919;
         color: white;
-        font-family: Nico Moji;
         font-size: 1.4rem;
         justify-content: space-between;
         border-bottom: #1E2A96 10px solid;
