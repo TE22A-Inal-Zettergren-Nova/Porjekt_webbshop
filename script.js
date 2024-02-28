@@ -140,3 +140,25 @@ function addToCart(namn, beskrivning, pris, bildSrc) {
   }
 
 }
+
+ // Funktion för att uppdatera antalet kolumner baserat på varukorgens synlighet
+ function updateColumns(varukorgVisible) {
+  const main = document.querySelector('main');
+  if (varukorgVisible) {
+      // Om varukorgen är synlig, visa 2 kolumner
+      main.style.gridTemplateColumns = 'repeat(2, 1fr)';
+  } else {
+      // Om varukorgen är dold, visa 3 kolumner
+      main.style.gridTemplateColumns = 'repeat(3, 1fr)';
+  }
+}
+
+// Funktion för vagnknappen till dator
+function toggleColumns() {
+  const varukorg = document.getElementById('Varukorg');
+  varukorg.style.display = varukorg.style.display === 'none' ? 'block' : 'none';
+  const varukorgVisible = varukorg.style.display !== 'none';
+  updateColumns(varukorgVisible);
+  updateKassaKnappSynlighet()
+}
+   
