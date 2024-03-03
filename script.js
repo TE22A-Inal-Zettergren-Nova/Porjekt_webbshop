@@ -20,7 +20,7 @@ function fnDisplayDivs() {
   // Hämta alla kryssrutor med klassen "dator-brand"
   var checkboxes = document.getElementsByClassName("dator-brand");
 
-  // Skapa en variabel för att hålla koll på om någon kryssruta är markerad
+  // Skapa en variabel för att hålla reda på om någon kryssruta är markerad
   var anyCheckboxChecked = false;
 
   // Loopa genom alla kryssrutor
@@ -28,27 +28,48 @@ function fnDisplayDivs() {
       var checkbox = checkboxes[i];
       var filter = checkbox.getAttribute("rel");
 
-      // Hämta alla artiklar med motsvarande klass och visa/dölj dem baserat på om kryssrutan är markerad eller inte
+      // Hämta alla artiklar med motsvarande klass
       var articles = document.getElementsByClassName(filter);
+
+      // Kontrollera om kryssrutan är markerad eller inte
+      if (checkbox.checked) {
+          anyCheckboxChecked = true;
+      }
+
+      // Loopa genom artiklarna och visa/dölja dem beroende på kryssrutans status
       for (var j = 0; j < articles.length; j++) {
           if (checkbox.checked) {
-              articles[j].style.display = "flex";
-              // Om någon kryssruta är markerad, sätt anyCheckboxChecked till true
-              anyCheckboxChecked = true;
+              // Om kryssrutan är markerad och skärmstorleken är mindre än 640px, visa artikeln med flex, annars block
+              articles[j].style.display = (window.innerWidth < 640) ? "flex" : "block";
           } else {
+              // Om kryssrutan inte är markerad, dölj artikeln
               articles[j].style.display = "none";
           }
       }
   }
 
-  // Om ingen kryssruta är markerad, visa alla artiklar
+  // Visa alla artiklar om ingen kryssruta är markerad
   if (!anyCheckboxChecked) {
       var allArticles = document.querySelectorAll(".main article");
       for (var k = 0; k < allArticles.length; k++) {
-          allArticles[k].style.display = "flex";
+          // Visa artikeln med flex om skärmstorleken är mindre än 640px, annars block
+          allArticles[k].style.display = (window.innerWidth < 640) ? "flex" : "block";
       }
   }
 }
+
+// Lyssna på ändringar i fönstrets storlek och uppdatera visningen av artiklar
+window.addEventListener('resize', fnDisplayDivs);
+
+// Köra funktionen för första gången när sidan laddas
+fnDisplayDivs();
+
+// Lyssna på ändringar i kryssrutor och uppdatera visningen av artiklar när en kryssruta klickas på
+var checkboxes = document.getElementsByClassName("dator-brand");
+for (var i = 0; i < checkboxes.length; i++) {
+  checkboxes[i].addEventListener('change', fnDisplayDivs);
+}
+
 
 // Funktion för att visa eller dölja varukorgen
 //gäller för tablett och mobil

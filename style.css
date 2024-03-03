@@ -101,12 +101,11 @@ main{
 
 article{
     background-color: white;
-    display: flex;
-    flex-direction: row;
     margin: 4% 4%;
     padding-top: 1vh;
     padding-bottom: 3vh;
     border-radius: 3px;
+    display: flex;
 }
 
 .dator{
@@ -225,7 +224,6 @@ footer{
     border-radius: 5px;
     overflow: hidden;
     padding-top: 3vh;
-    width: 88vw;
 }
 
 .varukorg-artikel img {
@@ -638,7 +636,7 @@ nav a:hover, .icon:hover .iconbtn {
 
     /*varukorg*/
     #Varukorg{
-        grid-column: 1 / 3;
+        grid-column: 1 / 4;
         grid-row: 4 / 5;
         border-top: #191919 solid 1px;
     }
@@ -924,6 +922,7 @@ nav a:hover, .icon:hover .iconbtn {
         margin: 2vh 2vw;
         padding-top: 1.5vh;
         padding-bottom: 2vh;
+        max-height: 240px;
     }
 
     .dator{
@@ -1014,6 +1013,7 @@ nav a:hover, .icon:hover .iconbtn {
     .varukorg-text {
         flex: 2;
         margin: 0;
+        width: 20vw;
     }
     
     .varukorg-namn {
