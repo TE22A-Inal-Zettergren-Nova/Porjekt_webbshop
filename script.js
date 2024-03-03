@@ -109,6 +109,14 @@ function addToCart(namn, beskrivning, pris, bildSrc) {
     prisDiv.classList.add("varukorg-pris");
     prisDiv.textContent = pris;
 
+    // Skapa en knapp för att ta bort varan från varukorgen
+    var removeButton = document.createElement("button");
+    removeButton.classList.add = "removeButton";
+    removeButton.textContent = "Ta bort";
+    removeButton.onclick = function() {
+        artikel.remove(); // Ta bort varan från DOM:en
+        taBortFrånVarukorg(namn); // Ta bort varan från localStorage
+    };
 
     // Lgg till namn, pris och beskrinving i textDiv
     textDiv.appendChild(namnDiv);
@@ -118,10 +126,16 @@ function addToCart(namn, beskrivning, pris, bildSrc) {
     // Lägg till blilden och texten i artikel-elementet
     artikel.appendChild(bildImg);
     artikel.appendChild(textDiv);
+    artikel.appendChild(removeButton);
 
     // Lägg till den nya artikeln i varukorgen
     var varukorgLista = document.getElementById("varukorg-lista");
     varukorgLista.appendChild(artikel);
+
+    // Spara den nya varukorgen till localStorage
+    var varukorg = JSON.parse(localStorage.getItem("varukorg")) || [];
+    varukorg.push({ namn: namn, beskrivning: beskrivning, pris: pris, bildSrc: bildSrc });
+    localStorage.setItem("varukorg", JSON.stringify(varukorg));
 
     //lägger till priset iden totala summan
     totalSumma += parseFloat(pris.replace(" kr", "").replace(/\D/g, ''));
@@ -165,4 +179,24 @@ function toggleColumns() {
   updateColumns(varukorgVisible);
   updateKassaKnappSynlighet()
 }
-   
+
+ // Funktion för att ta bort vara från varukorgen och uppdatera localStorage
+ function taBortFrånVarukorg(namn) {
+  var varukorg = JSON.parse(localStorage.getItem("varukorg")) || [];
+  varukorg = varukorg.filter(function (vara) {
+      return vara.namn !== namn; // Behåll alla varor som inte matchar det angivna namnet
+  });
+  localStorage.setItem("varukorg", JSON.stringify(varukorg));
+}
+
+ // Funktion som startar när sidan laddas
+ window.onload = function () {
+  // Visa varukorgen när sidan laddas
+  var varukorgLista = document.getElementById("varukorg-lista");
+  varukorgLista.innerHTML = '';
+
+  var varukorg = JSON.parse(localStorage.getItem("varukorg")) || [];
+  varukorg.forEach(function (vara) {
+      addToCart(vara.namn, vara.beskrivning, vara.pris, vara.bildSrc);
+  });
+};
