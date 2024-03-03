@@ -982,6 +982,8 @@ nav a:hover, .icon:hover .iconbtn {
         width: 25vw;
         display: none;
         border-left: solid 1px #191919 ;
+        overflow-y: scroll;
+        max-height: 70vh;
     }
     
     #rubrik-varukorg{
