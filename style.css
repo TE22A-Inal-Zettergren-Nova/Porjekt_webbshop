@@ -225,6 +225,7 @@ footer{
     border-radius: 5px;
     overflow: hidden;
     padding-top: 3vh;
+    width: 88vw;
 }
 
 .varukorg-artikel img {
@@ -255,7 +256,7 @@ footer{
 .varukorg-pris {
     color: #191919;
     font-size: 0.8rem;
-    margin-left: 61vw;
+    margin-left: 55vw;
     font-weight: bold;
     margin-bottom: -2vh;
     margin-top: 2vh;
@@ -1058,6 +1059,7 @@ nav a:hover, .icon:hover .iconbtn {
         margin-top: 5vh;
     }
 
+    /*footer*/
     footer{
         grid-row: 5;
         grid-column: 1 /4;
