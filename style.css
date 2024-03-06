@@ -164,6 +164,7 @@ p{
     font-weight: bold;
     margin-top: 2vh;
     border-color: #1E2A96;
+    cursor: pointer;
 }
 
 /*footer*/
@@ -453,6 +454,7 @@ nav a:hover, .icon:hover .iconbtn {
         height: 6vh;
         margin-right: 4vw;
         min-height: 50px;
+        cursor: pointer;
     }
 
 
@@ -623,6 +625,7 @@ nav a:hover, .icon:hover .iconbtn {
         font-weight: bold;
         margin-top: 1vh;
         border-color: #1E2A96;
+        cursor: pointer;
     }
 
     main{
@@ -805,6 +808,7 @@ nav a:hover, .icon:hover .iconbtn {
         width: auto;
         margin-right: 5vw;
         min-height: 70px;/*så att bilden ej krymper vid förminskning*/
+        cursor: pointer;
     }
 
     /*nav*/
@@ -973,6 +977,8 @@ nav a:hover, .icon:hover .iconbtn {
         font-weight: bold;
         margin-top: 1.5vh;
         border-color: #1E2A96;
+        cursor: pointer;
+
     }
 
     /*varukorg*/

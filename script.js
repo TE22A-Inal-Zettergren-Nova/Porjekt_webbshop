@@ -105,6 +105,39 @@ var synlig = varukorgLista.children.length > 0;
 tomKnapp.style.display = synlig ? "block" : "none";
 }
 
+//funktion för den totala summan
+function updateTotalSumma() {
+  var summaElement = document.getElementById("total-summa");
+  summaElement.textContent = "Summa: " + totalSumma.toFixed(2) + " kr";
+}
+
+
+
+//denna gäller för varukorgen till dator
+// Funktion för att uppdatera antalet kolumner baserat på varukorgens synlighet
+function updateColumns(varukorgVisible) {
+const main = document.querySelector('main');
+if (varukorgVisible) {
+  // Om varukorgen är synlig, visa 2 kolumner
+  main.style.gridTemplateColumns = 'repeat(2, 1fr)';
+  main.style.gridColumn = '2 / 3';
+} else {
+  // Om varukorgen är dold, visa 3 kolumner
+  main.style.gridTemplateColumns = 'repeat(3, 26vw)';
+  main.style.gridColumn = '2 / span 2';
+}
+}
+
+// Funktion för vagnknappen till dator
+function toggleColumns() {
+const varukorg = document.getElementById('Varukorg');
+varukorg.style.display = varukorg.style.display === 'none' ? 'block' : 'none';
+const varukorgVisible = varukorg.style.display !== 'none';
+updateColumns(varukorgVisible);
+updateKassaKnappSynlighet()
+}
+
+
 //funktion för att  lägga till i varukorghen samt få fram total summa
 // Variabel för att hålla reda på den totala summan
 var totalSumma = 0;
@@ -159,35 +192,4 @@ function addToCart(namn, beskrivning, pris, bildSrc) {
   varukorg.style.display = "block";
 
   
-
-//funktion för den totala summan
-  function updateTotalSumma() {
-    var summaElement = document.getElementById("total-summa");
-    summaElement.textContent = "Summa: " + totalSumma.toFixed(2) + " kr";
-}
-
-}
-
-//denna gäller för varukorgen till dator
-// Funktion för att uppdatera antalet kolumner baserat på varukorgens synlighet
-function updateColumns(varukorgVisible) {
-const main = document.querySelector('main');
-if (varukorgVisible) {
-    // Om varukorgen är synlig, visa 2 kolumner
-    main.style.gridTemplateColumns = 'repeat(2, 1fr)';
-    main.style.gridColumn = '2 / 3';
-} else {
-    // Om varukorgen är dold, visa 3 kolumner
-    main.style.gridTemplateColumns = 'repeat(3, 26vw)';
-    main.style.gridColumn = '2 / span 2';
-}
-}
-
-// Funktion för vagnknappen till dator
-function toggleColumns() {
-const varukorg = document.getElementById('Varukorg');
-varukorg.style.display = varukorg.style.display === 'none' ? 'block' : 'none';
-const varukorgVisible = varukorg.style.display !== 'none';
-updateColumns(varukorgVisible);
-updateKassaKnappSynlighet()
 }
