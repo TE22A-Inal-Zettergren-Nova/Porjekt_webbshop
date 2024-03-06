@@ -182,6 +182,9 @@ function addToCart(namn, beskrivning, pris, bildSrc) {
   var varukorgLista = document.getElementById("varukorg-lista");
   varukorgLista.appendChild(artikel);
 
+  varukorg.push(varukorgItem);
+  localStorage.setItem('varukorg', JSON.stringify(varukorg));
+
   //lägger till priset iden totala summan
   totalSumma += parseFloat(pris.replace(" kr", "").replace(/\D/g, ''));
   updateTotalSumma();
