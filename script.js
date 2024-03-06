@@ -95,7 +95,7 @@ console.error('Kunde inte hitta varukorgsikonen med angivet ID.');//extra kontro
 //ändrar kassan knappens synlighet
 function updateKassaKnappSynlighet() {
 var varukorg = document.getElementById("Varukorg");
-var tomKnapp = document.getElementById("kassa-knapp");
+var tomKnapp = document.getElementById("rensa-knapp");
 
 // Kontrollera om varukorgen innehåller några artiklar
 var varukorgLista = document.getElementById("varukorg-lista");
@@ -142,57 +142,90 @@ updateKassaKnappSynlighet()
 // Variabel för att hålla reda på den totala summan
 var totalSumma = 0;
 
+// För att spara varukorgen som en array i local storage
+// Om det finns sparade varor i local storage, ladda dem vid sidans inladdning
+var varukorg = JSON.parse(localStorage.getItem('varukorg')) || [];
+
 function addToCart(namn, beskrivning, pris, bildSrc) {
-  // Skapa en ny artikel för varukorgen
-  var artikel = document.createElement("article");
-  artikel.classList.add("varukorg-artikel");
+  // Skapa ett objekt för den nya varan
+  var nyVara = {
+    namn: namn,
+    beskrivning: beskrivning,
+    pris: pris,
+    bildSrc: bildSrc
+  };
 
-  // Skapa en img-tag för bilden
-  var bildImg = document.createElement("img");
-  bildImg.src = bildSrc;
-  bildImg.alt = namn;
+  // Lägg till den nya varan i varukorgen-arrayen
+  varukorg.push(nyVara);
 
-  // Skapa en div för texten och lägg till artikelns namn och pris
-  var textDiv = document.createElement("div");
-  textDiv.classList.add("varukorg-text");
-
-  var namnDiv = document.createElement("div");
-  namnDiv.classList.add("varukorg-namn");
-  namnDiv.textContent = namn;
-
-  var beskrivningDiv = document.createElement("div");
-  beskrivningDiv.classList.add("varukorg-beskrivning");
-  beskrivningDiv.textContent = beskrivning;
-
-  var prisDiv = document.createElement("div");
-  prisDiv.classList.add("varukorg-pris");
-  prisDiv.textContent = pris;
-
-
-  // Lgg till namn, pris och beskrinving i textDiv
-  textDiv.appendChild(namnDiv);
-  textDiv.appendChild(beskrivningDiv);
-  textDiv.appendChild(prisDiv);
-
-  // Lägg till blilden och texten i artikel-elementet
-  artikel.appendChild(bildImg);
-  artikel.appendChild(textDiv);
-
-  // Lägg till den nya artikeln i varukorgen
-  var varukorgLista = document.getElementById("varukorg-lista");
-  varukorgLista.appendChild(artikel);
-
-  varukorg.push(varukorgItem);
+  // Spara varukorgen till local storage
   localStorage.setItem('varukorg', JSON.stringify(varukorg));
 
+  // Visa varukorgen
+  var varukorgElement = document.getElementById("Varukorg");
+  varukorgElement.style.display = "block";
+
+  // Uppdatera gränssnittet med den nya varan
+  renderVarukorg();
+  updateKassaKnappSynlighet()
   //lägger till priset iden totala summan
   totalSumma += parseFloat(pris.replace(" kr", "").replace(/\D/g, ''));
   updateTotalSumma();
-
-  updateKassaKnappSynlighet();
-  // Visa varukorgen
-  var varukorg = document.getElementById("Varukorg");
-  varukorg.style.display = "block";
-
-  
 }
+
+// Funktion för att visa varukorgen i gränssnittet
+function renderVarukorg() {
+  var varukorgLista = document.getElementById("varukorg-lista");
+  varukorgLista.innerHTML = ""; // Rensa varukorgslistan
+
+  // Loopa igenom varukorg-arrayen och skapa element för varje vara
+  varukorg.forEach(function(vara) {
+    var artikel = document.createElement("article");
+    artikel.classList.add("varukorg-artikel");
+
+    var bildImg = document.createElement("img");
+    bildImg.src = vara.bildSrc;
+    bildImg.alt = vara.namn;
+
+    var textDiv = document.createElement("div");
+    textDiv.classList.add("varukorg-text");
+
+    var namnDiv = document.createElement("div");
+    namnDiv.classList.add("varukorg-namn");
+    namnDiv.textContent = vara.namn;
+
+    var beskrivningDiv = document.createElement("div");
+    beskrivningDiv.classList.add("varukorg-beskrivning");
+    beskrivningDiv.textContent = vara.beskrivning;
+
+    var prisDiv = document.createElement("div");
+    prisDiv.classList.add("varukorg-pris");
+    prisDiv.textContent = vara.pris;
+
+    textDiv.appendChild(namnDiv);
+    textDiv.appendChild(beskrivningDiv);
+    textDiv.appendChild(prisDiv);
+
+    artikel.appendChild(bildImg);
+    artikel.appendChild(textDiv);
+
+    varukorgLista.appendChild(artikel);
+  });
+}
+
+// Funktion för att rensa hela varukorgen
+function clearVarukorg() {
+  // Rensa varukorg-arrayen
+  varukorg = [];
+  // Ta bort varukorgen från local storage
+  localStorage.removeItem('varukorg');
+  totalSumma = 0;
+  updateTotalSumma();
+  // Uppdatera gränssnittet
+  renderVarukorg();
+}
+
+// Funktion för att ladda varukorgen vid sidans inladdning
+window.onload = function() {
+  renderVarukorg();
+};

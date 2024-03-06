@@ -267,7 +267,7 @@ footer{
     margin-top: 1vh;
 }
 
-#kassa-knapp{
+#rensa-knapp{
     background-color: #1E2A96;
     color: white;
     border-radius: 25px;
@@ -275,7 +275,7 @@ footer{
     font-size: 0.7rem;
     font-weight: bold;
     border-color: #1E2A96;
-
+    text-align: center;
 }
 
 .summa-position{
@@ -701,7 +701,7 @@ nav a:hover, .icon:hover .iconbtn {
         padding: 0;
     }
     
-    #kassa-knapp{
+    #rensa-knapp{
         background-color: #1E2A96;
         color: white;
         border-radius: 40px;
@@ -709,7 +709,7 @@ nav a:hover, .icon:hover .iconbtn {
         font-size: 1.3rem;
         font-weight: bold;
         border-color: #1E2A96;
-
+        text-align: center;
     }
     
     .summa-position{
@@ -1050,14 +1050,15 @@ nav a:hover, .icon:hover .iconbtn {
         padding: 0;
     }
     
-    #kassa-knapp{
+    #rensa-knapp{
         background-color: #1E2A96;
         color: white;
         border-radius: 25px;
         padding: 2.5vh 4vw;
-        font-size: 1rem;
+        font-size: 0.8rem;
         font-weight: bold;
         border-color: #1E2A96;
+        text-align: center;
     }
     
     .summa-position{
