@@ -923,7 +923,7 @@ nav a:hover, .icon:hover .iconbtn {
         margin: 2vh 2vw;
         padding-top: 1.5vh;
         padding-bottom: 2vh;
-        max-height: fit-content;
+        max-height: 35vh; 
     }
 
     .dator{
