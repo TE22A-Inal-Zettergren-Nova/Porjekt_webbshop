@@ -658,13 +658,11 @@ nav a:hover, .icon:hover .iconbtn {
     
     .varukorg-artikel {
         border-radius: 5px;
-        overflow: hidden;
-        width: 55vw;
     }
     
     .varukorg-artikel img {
         width: auto; 
-        height: 9vh; 
+        height: 10vh; 
         margin-left: 2.5vw;
         min-height: 90px;
     }
@@ -690,15 +688,17 @@ nav a:hover, .icon:hover .iconbtn {
     .varukorg-pris {
         font-size: 1rem;
         margin: 0;
-        margin-left: 28vw;
         margin-top: 3vh;
         margin-bottom: -1vh;
+        margin-right: 2vw;
+        float: right;
     }
     
     #total-summa{
         margin-bottom: 2.5vh ;
         font-size: 1.2em;
         padding: 0;
+
     }
     
     #rensa-knapp{
@@ -706,22 +706,19 @@ nav a:hover, .icon:hover .iconbtn {
         color: white;
         border-radius: 40px;
         padding: 1.1vh 6vw;
-        font-size: 1.3rem;
+        font-size: 0.9rem;
         font-weight: bold;
         border-color: #1E2A96;
         text-align: center;
     }
     
     .summa-position{
-        padding: 0;
-        margin: 0;
-        float: right;
-        flex-direction: column-reverse;
-        margin-right: 6vw;
-        margin-top: -20vh;
-        position: relative;
         text-align: center;
         margin-bottom: 2vh;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-evenly;
+
     }
     
 
@@ -926,7 +923,7 @@ nav a:hover, .icon:hover .iconbtn {
         margin: 2vh 2vw;
         padding-top: 1.5vh;
         padding-bottom: 2vh;
-        max-height: 240px;
+        max-height: fit-content;
     }
 
     .dator{
@@ -972,7 +969,7 @@ nav a:hover, .icon:hover .iconbtn {
         background-color: #1E2A96;
         color: white;
         border-radius: 25px;
-        padding: 2vh 2.5vw;
+        padding: 1.5vh 2.2vw;
         font-size: 0.8rem;
         font-weight: bold;
         margin-top: 1.5vh;
